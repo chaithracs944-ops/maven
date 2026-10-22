@@ -1,4 +1,4 @@
-name:java ci/cd pipeline
+name:Java CI/CD pipeline
 on:
 push:
   branches:["main"]
@@ -9,16 +9,16 @@ push:
 
     steps:
     -name:Checkout respository
-    uses:actions/checkout@v4
+     uses:actions/checkout@v4
 
     -name:Set up JDK 21
-    uses:actions/setup-java@v4
-    with:
+     uses:actions/setup-java@v4
+     with:
        java-version:'21'
        distribution:'temurin'
 
     -name:Compile java  Program
-    run:javac New.java
+     run:javac New.java
 
     -name:Run Java Program 
      run:java New
